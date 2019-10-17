@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Array</title>
+  </head>
+  <body>
+    <h2 style="text-align: center;">Find Unique values in an Array</h2>
+
+    <h4 style="text-align: center;">Output in console</h4>
+
+    <script>
+      function findunique(arr) {
+        // sort the array before checking
+        const input = arr.sort();
+        let i = 0;
+        for (j = 1; j < input.length; j++) {
+          if (input[i] !== input[j]) {
+            i++;
+            input[i] = input[j];
+          }
+        }
+        console.log(i + 1);
+      }
+      findunique([1, 2, 2, 3, 3]);
+    </script>
+  </body>
+</html>

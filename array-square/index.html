@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Array</title>
+  </head>
+  <body>
+    <h2 style="text-align: center;">Find Square of Array</h2>
+
+    <h4 style="text-align: center;">Output in console</h4>
+
+    <script>
+      function matcharray(arr1, arr2) {
+        if (arr1.length !== arr2.length) {
+          console.log("length of array is not same");
+        } else {
+          for (let i = 0; i < arr1.length; i++) {
+            let index = arr2.indexOf(arr1[i] ** 2);
+            if (index === -1) {
+              console.log(
+                "square of " + " " + arr1[i] + " is not found, So failed!!"
+              );
+            } else {
+              console.log("Found the square match for " + arr1[i]);
+            }
+            arr2.splice(index, 1);
+          }
+        }
+      }
+
+      matcharray([1, 4, 6], [1, 36, 16]);
+    </script>
+  </body>
+</html>
